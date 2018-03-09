@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>JSDoc: Home</title>
+    <title>JSDoc: Source: index.js</title>
 
     <script src="scripts/prettify/prettify.js"> </script>
     <script src="scripts/prettify/lang-css.js"> </script>
@@ -17,32 +17,44 @@
 
 <div id="main">
 
-    <h1 class="page-title">Home</h1>
+    <h1 class="page-title">Source: index.js</h1>
 
     
 
 
 
     
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>#!/usr/bin/env node
+
+const Conf = require('conf');
+const helpers = require('./helpers.js');
+const cash = require('./cash.js');
+
+const config = new Conf();
+
+const argv = process.argv.slice(2);
 
 
-    <h3> </h3>
+helpers(argv);
 
+/**
+ * Creating the object 'command'
+ */
+const command = {
+  'amount': argv[0] || 1,
+  'from': argv[1] || config.get('defaultFrom', 'USD'),
+  'to':
+    argv.length > 2
+      ? process.argv.slice(4)
+      : config.get('defaultTo', ['USD', 'EUR', 'GBP'])
+};
 
-
-
-
-
-
-
-
-
-    
-
-
-
-
-
+cash(command);
+</code></pre>
+        </article>
+    </section>
 
 
 
