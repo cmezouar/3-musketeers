@@ -9,7 +9,7 @@ const API = 'https://api.fixer.io/latest';
 
 /**
  * Converts one currency to another.
- * @param {*} configuration 
+ * @param {*} configuration
  */
 const convert = configuration => {
   const {amount, to, from, response, loading} = configuration;
@@ -62,6 +62,7 @@ const cash = async command => {
 
   loading.start();
 
+  
   try {
     const response = await got(API, {'json': true});
 

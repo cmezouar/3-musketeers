@@ -8,6 +8,10 @@ const config = new Conf();
 
 updateNotifier({pkg}).notify();
 
+/**
+ * Saves the currencies.
+ * @param {*} argv 
+ */
 const saveCurrencies = argv => {
   config.set('defaultFrom', argv[1] || config.get('defaultFrom', 'USD'));
   config.set(
@@ -20,11 +24,17 @@ const saveCurrencies = argv => {
   process.exit(1);
 };
 
+/**
+ * Displays the package version.
+ */
 const version = () => {
   console.log(pkg.version);
   process.exit(1);
 };
 
+/**
+ * Provides help on how to use chalk methods
+ */
 const help = () => {
   console.log(`
 Usage:
@@ -57,6 +67,10 @@ Examples:
   process.exit(1);
 };
 
+/**
+ * Runs the three previous functions depending on argv element value.
+ * @param {*} argv 
+ */
 const helpers = argv => {
   // Version
   if (argv.indexOf('--version') !== - 1 || argv.indexOf('-v') !== - 1) {
