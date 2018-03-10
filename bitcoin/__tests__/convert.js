@@ -4,12 +4,14 @@ const convert = require('..');
 const Big = require('big.js');
 
 test('should default to returning then default ifself', () => {
-  //convert(2, 'BTC', 'BTC');
+  const actual = convert(2, 'BTC', 'BTC');
+  const expected = 
   throw new Error('test not yet defined... write your test here');
 });
 
 test('should return a number', () => {
-  //convert(2, 'BTC', 'BTC', 'Number');
+  const actual = typeof convert(2, 'BTC', 'BTC', 'Number');
+  const expected = 'Number';
   throw new Error('test not yet defined... write your test here');
 });
 
@@ -19,7 +21,8 @@ test('should return a Big number', () => {
 });
 
 test('should return a string', () => {
-  //convert(2100, 'mBTC', 'BTC', 'String');
+  const actual = typeof convert(2100, 'mBTC', 'BTC', 'String');
+  const expected = 'String';
   throw new Error('test not yet defined... write your test here');
 });
 
@@ -34,7 +37,8 @@ test('should convert a number from float', () => {
 });
 
 test('should convert a string', () => {
-  //convert('2', 'BTC', 'BTC', 'Number');
+  const actual = typeof convert('2', 'BTC', 'BTC', 'Number');
+  const expected = 'String';
   throw new Error('test not yet defined... write your test here');
 });
 
@@ -74,7 +78,7 @@ test('should throw when untest is undefined', () => {
   throw new Error('test not yet defined... write your test here');
 });
 
-test('should throw when representaion is undefined', () => {
+test('should throw when representation is undefined', () => {
   //convert(2, 'BTC', 'mBTC', 'x');
   //convert(NaN, 'BTC', 'mBTC', 'x');
   throw new Error('test not yet defined... write your test here');
