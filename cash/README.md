@@ -2,7 +2,7 @@
 
 ## Description
 
-The **cash** library is a library which
+The **cash** library is a library which allows to convert one currency to another.
 
 ## Install
 
