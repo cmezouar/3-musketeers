@@ -12,10 +12,11 @@ test('should default to returning then default ifself', () => {
 test('should return a number', () => {
   const actual = typeof convert(2, 'BTC', 'BTC', 'Number');
   const expected = 'Number';
-  throw new Error('test not yet defined... write your test here');
+  throw new Error;
+  
 });
 
-test('should return a Big number', () => {
+test('should return a Big number', assert=> {
   //convert(2, 'BTC', 'BTC', 'Big');
   throw new Error('test not yet defined... write your test here');
 });
